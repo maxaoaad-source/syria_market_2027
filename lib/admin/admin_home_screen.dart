@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../core/services/supabase_service.dart';
-import '../core/models/ad_model.dart';
+import 'package:syria_market_fresh/core/services/supabase_service.dart';
+import 'package:syria_market_fresh/core/models/ad_model.dart';
 
 class AdminHomeScreen extends StatefulWidget {
   const AdminHomeScreen({super.key});
