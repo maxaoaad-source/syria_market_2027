@@ -60,7 +60,7 @@ class _AdminHomeScreenState extends State<AdminHomeScreen>
       final settingsData = await client.from("settings").select().maybeSingle();
 
       setState(() {
-        ads = adsData.map<AdModel>((e) => AdModel.fromMap(e)).toList();
+        ads = (adsData as List).map<AdModel>((e) => AdModel.fromMap(e)).toList();
         categories = categoriesData;
         plans = plansData;
         badges = badgesData;
@@ -116,7 +116,7 @@ class _AdminHomeScreenState extends State<AdminHomeScreen>
     return ListView.builder(
       itemCount: ads.length,
       itemBuilder: (context, index) {
-        final ad = ads[index];
+        final AdModel ad = ads[index];
         return Card(
           margin: const EdgeInsets.all(8),
           child: ListTile(
